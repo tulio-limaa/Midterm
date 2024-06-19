@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="393.0" prefWidth="420.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.midterm.HelloController">
+    <children>
+        <TextField fx:id="patientIDField" layoutX="100.0" layoutY="20.0" />
+        <Button layoutX="250.0" layoutY="20.0" onAction="#handleSearch" text="Search" />
+
+        <TableView fx:id="resultsTable" layoutX="20.0" layoutY="60.0" prefHeight="150.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="patientIDColumn" text="Patient ID" />
+                <TableColumn fx:id="symptomsColumn" text="Symptoms" />
+                <TableColumn fx:id="diagnosisColumn" text="Diagnosis" />
+                <TableColumn fx:id="medicinesColumn" text="Medicines" />
+                <TableColumn fx:id="wardRequiredColumn" prefWidth="75.33331298828125" text="Ward Required" />
+            </columns>
+        </TableView>
+
+        <Label layoutX="20.0" layoutY="230.0" text="Symptoms:" />
+        <TextField fx:id="symptomsField" layoutX="100.0" layoutY="230.0" />
+
+        <Label layoutX="20.0" layoutY="270.0" text="Diagnosis:" />
+        <TextField fx:id="diagnosisField" layoutX="100.0" layoutY="270.0" />
+
+        <Label layoutX="20.0" layoutY="310.0" text="Medicines:" />
+        <TextField fx:id="medicinesField" layoutX="100.0" layoutY="310.0" />
+
+        <CheckBox fx:id="wardRequiredCheckBox" layoutX="300.0" layoutY="230.0" text="Ward Required?" />
+
+        <Button layoutX="100.0" layoutY="360.0" onAction="#handleSave" text="Save" />
+        <Button layoutX="200.0" layoutY="360.0" onAction="#handleClose" text="Close" />
+
+        <Label layoutX="283.0" layoutY="272.0" text="Tulio Cunha Lima">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="20.0" layoutY="24.0" text="Patient ID:" />
+      <Label layoutX="303.0" layoutY="299.0" text="200555528">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
